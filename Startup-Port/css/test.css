@@ -1,0 +1,303 @@
+/* Global Styles */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html,body {
+color:#fddaec;
+font-family: 'Roboto', sans-serif;
+font-size:100%;
+height:100%;
+line-height:1.45;
+}
+
+#content1 h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #FFF;
+    text-align: center;
+}
+
+#text h2 {
+    z-index: 100;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.1em;
+    font-family: 'Roboto', sans-serif;
+    color: #FFF;
+}
+
+#text p {
+    color: #FFF;
+    z-index: 100;
+}
+
+h3 {
+    font-size: 1.6em;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+    font-size: 1.4em;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 1.6em;
+    margin: 0 0 1em 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+#content1 a {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 10px 50px 10px 50px;
+    transition: background-color 0.5s;
+    border-radius: 30px;
+    font-weight: 700;
+    background-color: transparent;
+    border: 2px solid #FFF;
+} 
+
+#content1 a:hover {
+    color: #999;
+    border: 2px solid #999;
+    background-color: transparent;
+}
+
+/* Video Overlay */
+
+#overlay {
+background-color:rgba(0,0,0,.35);
+height:650px;
+position:relative;
+transition:background-color 300ms ease;
+width:100%;
+}
+
+.fade { background-color:rgba(0,0,0,.85) !important; }
+
+
+/* Hero Video + Fallback */
+
+#hero-vid {
+backface-visibility:hidden;
+background-size:cover;
+background-position: center;
+perspective:1000;
+position:fixed;
+z-index:-1;
+}
+
+#hero-pic {
+display:block;
+height:auto;
+width:100%;
+}
+
+#state {
+bottom:0;
+cursor:pointer;
+font-size:2.25rem;
+left:0;
+line-height:1;
+padding:2rem 2.5rem 1.65rem;
+position:absolute;
+}
+
+
+/* Content Styles */
+
+#title {
+backface-visibility:hidden;
+left:0;
+perspective:1000;
+position:fixed;
+width:100%;
+color: #FFF;
+}
+
+#text {
+    margin-top: 90px;
+    backface-visibility:hidden;
+    left:0;
+    perspective:1000;
+    position:fixed;
+    padding:2.5rem;
+    width:100%;
+    color: #FFF; 
+    background-color:transparent;
+    margin-bottom: 20px;
+}
+
+#title h1 {
+background-color:rgba(0,0,0,.5);
+font-family: 'Roboto', sans-serif;
+font-size:2.5rem;
+padding:1rem 1.75rem;
+}
+
+#content {
+padding: 60px 120px 60px 120px;
+position:relative;
+z-index:1;
+color: #000;
+}
+
+#content1 {
+    padding: 40px 120px 60px 120px;
+    position:relative;
+    z-index:100;
+    color: #000;
+    height: 600px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.65), 
+        rgba(0, 0, 0, 0.65)
+      ),url(../images/white-mug.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    }
+
+#content1 h2 {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+#content p {
+font-size:1.6em;
+letter-spacing:.02rem;
+margin-bottom:1.3rem;
+color: #000;
+}
+
+#overlay a.logo {
+    position: absolute;
+    text-align: center;
+    display: block;
+    height: 40px;
+    background: url(../images/logo.png) no-repeat 0 0 #FFF;
+    opacity: 0.45;
+    background-size: contain;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 950px) {
+    #content {
+        padding: 60px;
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width:852px) {
+    #content1 {
+        padding: 40px 60px 40px 60px;
+    }
+    #content1 h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #hero-pic { 
+        height: 500px;
+        position: relative;
+        z-index: 1;
+    }
+    #text h2 {
+        position: absolute;
+        z-index: 1000;
+        margin-top: 50px;
+    }
+    #text p {
+        position: absolute;
+        z-index: 1000;
+        margin-top: 150px;
+        padding-bottom: 20px;
+    }
+
+    #overlay { height:auto; }
+    #content {
+        padding: 40px;
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width:603px) {
+    #text h2 {
+        font-size: 1.6em;
+    }
+    #text p {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width:480px) 
+{
+    #text {
+        padding:1rem;
+    }
+    #text h2 {
+        font-size: 1.4em;
+        margin-top: 0 !important;
+        padding: 0 !important;
+    }
+    #text p {
+        font-size: 1.1em;
+        margin-top: 30px !important; 
+        padding: 0 !important;
+    }
+    #hero-pic { 
+        height: 300px;
+    }
+    #content1 a {
+        font-size: 1.65em;
+        padding: 10px 50px 10px 50px;
+    } 
+
+    #content {
+        padding: 20px;
+        font-size: 0.7em;
+    }
+    #content1 {
+        padding: 20px;
+    }
+    #content1 h1 {
+        font-size: 1.6em;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    #text h2 {
+        font-size: 1.2em;
+    }
+    #text p {
+        font-size: 1em;
+        margin-top: 30px !important; 
+    }
+}
+
+@media only screen and (max-width:315px) {
+    #content1 a {
+        font-size: 1.4em;
+        padding: 10px;
+    } 
+}
+
+/* Visibility Helpers */
+
+@media only screen and (min-width:769px) {
+    .visible-mobile,.visible-tablet,.hidden-desktop { display:none !important; }
+}
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+    .visible-mobile,.hidden-tablet,.visible-desktop { display:none !important; }
+}
+
+@media only screen and (max-width:479px) {
+    .hidden-mobile,.visible-tablet,.visible-desktop { display:none !important; }
+}
